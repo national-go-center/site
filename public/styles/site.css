@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,300,400,700);
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -1141,7 +1142,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Exo, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.1;
   color: #444; }
@@ -5828,7 +5829,7 @@ button.close {
   color: #D9230F; }
 
 .btn {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: Exo, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .btn-default,
 .btn-default:hover {
@@ -5964,21 +5965,44 @@ label {
 .pager .disabled > a {
   border-color: #ddd; }
 
-#header {
-  margin-top: 30px; }
+body {
+  background-attachment: fixed;
+  background-image: url("/images/jonathan-hop.jpg");
+  background-position: 100% 0;
+  background-size: cover; }
+  body #body [class*='col-'] {
+    padding: 10px 25px 15px 25px; }
+
+.position-static {
+  position: static; }
+
+.ngc-logo {
+  position: relative;
+  z-index: 1031; }
+
+.navbar-fixed-top {
+  border: 0; }
 
 .navbar-brand {
-  width: 200px; }
+  padding-top: 6px;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  width: 230px; }
   .navbar-brand > img {
-    margin-top: -11px; }
+    width: 100%; }
+
+.navbar-nav {
+  font-family: Exo, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
 
 #body {
-  padding-left: 185px; }
+  padding-top: 40px; }
 
 #footer {
   margin-top: 30px;
-  border-top: 1px solid #eeeeee;
-  padding-left: 235px;
   padding-top: 30px;
   color: #777777; }
 
@@ -5986,3 +6010,1249 @@ label {
   display: block;
   max-width: 100%;
   height: auto; }
+
+#sgf-player {
+  background: #e4bb67;
+  position: absolute;
+  left: -100px;
+  right: -100px;
+  top: -100px; }
+
+.homepage-feature {
+  background: rgba(51, 51, 51, 0.5); }
+  .homepage-feature h1 {
+    color: rgba(255, 255, 255, 0.7); }
+  .homepage-feature p {
+    color: white;
+    font-size: 18px; }
+
+.what-is-go {
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 18px; }
+
+.recent-news {
+  background: rgba(34, 34, 34, 0.8);
+  font-size: 18px; }
+  .recent-news h2 {
+    color: #ddd; }
+
+.row.is-flex {
+  display: flex;
+  flex-wrap: wrap; }
+
+.row.is-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column; }
+
+.primary-content {
+  background: rgba(255, 255, 255, 0.8); }
+
+.sgf-viewer {
+  /* config */
+  background-color: #ca973e;
+  padding-top: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 40px; }
+  .sgf-viewer:before {
+    background-image: linear-gradient(180deg, black 0, transparent 1px), linear-gradient(90deg, black 0, transparent 1px);
+    background-size: 5.26316% 5.26316%;
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .sgf-viewer .stone {
+    border-radius: 50%;
+    display: block;
+    height: 5.26316%;
+    position: absolute;
+    width: 5.26316%; }
+    .sgf-viewer .stone:before, .sgf-viewer .stone:after {
+      border-radius: 50%;
+      bottom: 0;
+      content: '';
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0; }
+    .sgf-viewer .stone:before {
+      z-index: 2; }
+    .sgf-viewer .stone.black:before {
+      background-color: black; }
+    .sgf-viewer .stone.white:before {
+      background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(1) {
+      left: 81.57895%;
+      top: 13.15789%; }
+      .sgf-viewer .stone:nth-child(1):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(2) {
+      left: 71.05263%;
+      top: 81.57895%; }
+      .sgf-viewer .stone:nth-child(2):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(3) {
+      left: 71.05263%;
+      top: 13.15789%; }
+      .sgf-viewer .stone:nth-child(3):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(4) {
+      left: 13.15789%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(4):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(5) {
+      left: 7.89474%;
+      top: 65.78947%; }
+      .sgf-viewer .stone:nth-child(5):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(6) {
+      left: 23.68421%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(6):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(7) {
+      left: 81.57895%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(7):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(8) {
+      left: 13.15789%;
+      top: 7.89474%; }
+      .sgf-viewer .stone:nth-child(8):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(9) {
+      left: 60.52632%;
+      top: 7.89474%; }
+      .sgf-viewer .stone:nth-child(9):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(10) {
+      left: 18.42105%;
+      top: 18.42105%; }
+      .sgf-viewer .stone:nth-child(10):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(11) {
+      left: 18.42105%;
+      top: 23.68421%; }
+      .sgf-viewer .stone:nth-child(11):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(12) {
+      left: 18.42105%;
+      top: 13.15789%; }
+      .sgf-viewer .stone:nth-child(12):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(13) {
+      left: 13.15789%;
+      top: 28.94737%; }
+      .sgf-viewer .stone:nth-child(13):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(14) {
+      left: 7.89474%;
+      top: 18.42105%; }
+      .sgf-viewer .stone:nth-child(14):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(15) {
+      left: 2.63158%;
+      top: 18.42105%; }
+      .sgf-viewer .stone:nth-child(15):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(16) {
+      left: 81.57895%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(16):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(17) {
+      left: 81.57895%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(17):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(18) {
+      left: 2.63158%;
+      top: 23.68421%; }
+      .sgf-viewer .stone:nth-child(18):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(19) {
+      left: 7.89474%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(19):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(20) {
+      left: 44.73684%;
+      top: 81.57895%; }
+      .sgf-viewer .stone:nth-child(20):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(21) {
+      left: 71.05263%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(21):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(22) {
+      left: 18.42105%;
+      top: 60.52632%; }
+      .sgf-viewer .stone:nth-child(22):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(23) {
+      left: 55.26316%;
+      top: 81.57895%; }
+      .sgf-viewer .stone:nth-child(23):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(24) {
+      left: 86.84211%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(24):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(25) {
+      left: 76.31579%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(25):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(26) {
+      left: 71.05263%;
+      top: 55.26316%; }
+      .sgf-viewer .stone:nth-child(26):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(27) {
+      left: 81.57895%;
+      top: 55.26316%; }
+      .sgf-viewer .stone:nth-child(27):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(28) {
+      left: 60.52632%;
+      top: 55.26316%; }
+      .sgf-viewer .stone:nth-child(28):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(29) {
+      left: 50%;
+      top: 71.05263%; }
+      .sgf-viewer .stone:nth-child(29):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(30) {
+      left: 60.52632%;
+      top: 65.78947%; }
+      .sgf-viewer .stone:nth-child(30):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(31) {
+      left: 76.31579%;
+      top: 65.78947%; }
+      .sgf-viewer .stone:nth-child(31):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(32) {
+      left: 7.89474%;
+      top: 71.05263%; }
+      .sgf-viewer .stone:nth-child(32):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(33) {
+      left: 28.94737%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(33):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(34) {
+      left: 28.94737%;
+      top: 71.05263%; }
+      .sgf-viewer .stone:nth-child(34):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(35) {
+      left: 34.21053%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(35):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(36) {
+      left: 23.68421%;
+      top: 81.57895%; }
+      .sgf-viewer .stone:nth-child(36):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(37) {
+      left: 34.21053%;
+      top: 71.05263%; }
+      .sgf-viewer .stone:nth-child(37):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(38) {
+      left: 34.21053%;
+      top: 86.84211%; }
+      .sgf-viewer .stone:nth-child(38):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(39) {
+      left: 50%;
+      top: 60.52632%; }
+      .sgf-viewer .stone:nth-child(39):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(40) {
+      left: 65.78947%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(40):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(41) {
+      left: 71.05263%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(41):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(42) {
+      left: 65.78947%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(42):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(43) {
+      left: 65.78947%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(43):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(44) {
+      left: 55.26316%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(44):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(45) {
+      left: 60.52632%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(45):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(46) {
+      left: 44.73684%;
+      top: 65.78947%; }
+      .sgf-viewer .stone:nth-child(46):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(47) {
+      left: 50%;
+      top: 65.78947%; }
+      .sgf-viewer .stone:nth-child(47):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(48) {
+      left: 50%;
+      top: 50%; }
+      .sgf-viewer .stone:nth-child(48):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(49) {
+      left: 28.94737%;
+      top: 65.78947%; }
+      .sgf-viewer .stone:nth-child(49):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(50) {
+      left: 23.68421%;
+      top: 71.05263%; }
+      .sgf-viewer .stone:nth-child(50):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(51) {
+      left: 39.47368%;
+      top: 55.26316%; }
+      .sgf-viewer .stone:nth-child(51):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(52) {
+      left: 39.47368%;
+      top: 50%; }
+      .sgf-viewer .stone:nth-child(52):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(53) {
+      left: 34.21053%;
+      top: 50%; }
+      .sgf-viewer .stone:nth-child(53):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(54) {
+      left: 39.47368%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(54):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(55) {
+      left: 34.21053%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(55):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(56) {
+      left: 44.73684%;
+      top: 55.26316%; }
+      .sgf-viewer .stone:nth-child(56):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(57) {
+      left: 34.21053%;
+      top: 55.26316%; }
+      .sgf-viewer .stone:nth-child(57):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(58) {
+      left: 39.47368%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(58):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(59) {
+      left: 34.21053%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(59):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(60) {
+      left: 44.73684%;
+      top: 28.94737%; }
+      .sgf-viewer .stone:nth-child(60):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(61) {
+      left: 76.31579%;
+      top: 23.68421%; }
+      .sgf-viewer .stone:nth-child(61):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(62) {
+      left: 71.05263%;
+      top: 28.94737%; }
+      .sgf-viewer .stone:nth-child(62):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(63) {
+      left: 71.05263%;
+      top: 23.68421%; }
+      .sgf-viewer .stone:nth-child(63):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(64) {
+      left: 81.57895%;
+      top: 23.68421%; }
+      .sgf-viewer .stone:nth-child(64):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(65) {
+      left: 76.31579%;
+      top: 28.94737%; }
+      .sgf-viewer .stone:nth-child(65):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(66) {
+      left: 81.57895%;
+      top: 28.94737%; }
+      .sgf-viewer .stone:nth-child(66):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(67) {
+      left: 2.63158%;
+      top: 71.05263%; }
+      .sgf-viewer .stone:nth-child(67):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(68) {
+      left: 2.63158%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(68):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(69) {
+      left: 13.15789%;
+      top: 71.05263%; }
+      .sgf-viewer .stone:nth-child(69):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(70) {
+      left: 7.89474%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(70):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(71) {
+      left: 7.89474%;
+      top: 55.26316%; }
+      .sgf-viewer .stone:nth-child(71):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(72) {
+      left: 71.05263%;
+      top: 65.78947%; }
+      .sgf-viewer .stone:nth-child(72):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(73) {
+      left: 76.31579%;
+      top: 7.89474%; }
+      .sgf-viewer .stone:nth-child(73):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(74) {
+      left: 76.31579%;
+      top: 13.15789%; }
+      .sgf-viewer .stone:nth-child(74):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(75) {
+      left: 71.05263%;
+      top: 7.89474%; }
+      .sgf-viewer .stone:nth-child(75):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(76) {
+      left: 65.78947%;
+      top: 13.15789%; }
+      .sgf-viewer .stone:nth-child(76):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(77) {
+      left: 65.78947%;
+      top: 7.89474%; }
+      .sgf-viewer .stone:nth-child(77):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(78) {
+      left: 81.57895%;
+      top: 7.89474%; }
+      .sgf-viewer .stone:nth-child(78):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(79) {
+      left: 44.73684%;
+      top: 7.89474%; }
+      .sgf-viewer .stone:nth-child(79):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(80) {
+      left: 50%;
+      top: 13.15789%; }
+      .sgf-viewer .stone:nth-child(80):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(81) {
+      left: 50%;
+      top: 7.89474%; }
+      .sgf-viewer .stone:nth-child(81):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(82) {
+      left: 76.31579%;
+      top: 50%; }
+      .sgf-viewer .stone:nth-child(82):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(83) {
+      left: 81.57895%;
+      top: 50%; }
+      .sgf-viewer .stone:nth-child(83):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(84) {
+      left: 76.31579%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(84):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(85) {
+      left: 65.78947%;
+      top: 50%; }
+      .sgf-viewer .stone:nth-child(85):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(86) {
+      left: 60.52632%;
+      top: 50%; }
+      .sgf-viewer .stone:nth-child(86):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(87) {
+      left: 55.26316%;
+      top: 23.68421%; }
+      .sgf-viewer .stone:nth-child(87):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(88) {
+      left: 55.26316%;
+      top: 18.42105%; }
+      .sgf-viewer .stone:nth-child(88):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(89) {
+      left: 50%;
+      top: 28.94737%; }
+      .sgf-viewer .stone:nth-child(89):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(90) {
+      left: 44.73684%;
+      top: 23.68421%; }
+      .sgf-viewer .stone:nth-child(90):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(91) {
+      left: 55.26316%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(91):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(92) {
+      left: 76.31579%;
+      top: 60.52632%; }
+      .sgf-viewer .stone:nth-child(92):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(93) {
+      left: 81.57895%;
+      top: 60.52632%; }
+      .sgf-viewer .stone:nth-child(93):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(94) {
+      left: 86.84211%;
+      top: 71.05263%; }
+      .sgf-viewer .stone:nth-child(94):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(95) {
+      left: 86.84211%;
+      top: 81.57895%; }
+      .sgf-viewer .stone:nth-child(95):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(96) {
+      left: 65.78947%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(96):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(97) {
+      left: 71.05263%;
+      top: 71.05263%; }
+      .sgf-viewer .stone:nth-child(97):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(98) {
+      left: 81.57895%;
+      top: 65.78947%; }
+      .sgf-viewer .stone:nth-child(98):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(99) {
+      left: 76.31579%;
+      top: 71.05263%; }
+      .sgf-viewer .stone:nth-child(99):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(100) {
+      left: 81.57895%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(100):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(101) {
+      left: 86.84211%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(101):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(102) {
+      left: 44.73684%;
+      top: 60.52632%; }
+      .sgf-viewer .stone:nth-child(102):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(103) {
+      left: 65.78947%;
+      top: 81.57895%; }
+      .sgf-viewer .stone:nth-child(103):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(104) {
+      left: 39.47368%;
+      top: 81.57895%; }
+      .sgf-viewer .stone:nth-child(104):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(105) {
+      left: 39.47368%;
+      top: 86.84211%; }
+      .sgf-viewer .stone:nth-child(105):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(106) {
+      left: 44.73684%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(106):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(107) {
+      left: 50%;
+      top: 81.57895%; }
+      .sgf-viewer .stone:nth-child(107):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(108) {
+      left: 55.26316%;
+      top: 86.84211%; }
+      .sgf-viewer .stone:nth-child(108):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(109) {
+      left: 65.78947%;
+      top: 71.05263%; }
+      .sgf-viewer .stone:nth-child(109):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(110) {
+      left: 65.78947%;
+      top: 86.84211%; }
+      .sgf-viewer .stone:nth-child(110):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(111) {
+      left: 60.52632%;
+      top: 86.84211%; }
+      .sgf-viewer .stone:nth-child(111):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(112) {
+      left: 71.05263%;
+      top: 86.84211%; }
+      .sgf-viewer .stone:nth-child(112):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(113) {
+      left: 60.52632%;
+      top: 81.57895%; }
+      .sgf-viewer .stone:nth-child(113):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(114) {
+      left: 50%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(114):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(115) {
+      left: 50%;
+      top: 86.84211%; }
+      .sgf-viewer .stone:nth-child(115):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(116) {
+      left: 28.94737%;
+      top: 7.89474%; }
+      .sgf-viewer .stone:nth-child(116):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(117) {
+      left: 18.42105%;
+      top: 50%; }
+      .sgf-viewer .stone:nth-child(117):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(118) {
+      left: 13.15789%;
+      top: 50%; }
+      .sgf-viewer .stone:nth-child(118):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(119) {
+      left: 28.94737%;
+      top: 60.52632%; }
+      .sgf-viewer .stone:nth-child(119):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(120) {
+      left: 50%;
+      top: 92.10526%; }
+      .sgf-viewer .stone:nth-child(120):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(121) {
+      left: 44.73684%;
+      top: 86.84211%; }
+      .sgf-viewer .stone:nth-child(121):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(122) {
+      left: 55.26316%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(122):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(123) {
+      left: 60.52632%;
+      top: 92.10526%; }
+      .sgf-viewer .stone:nth-child(123):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(124) {
+      left: 34.21053%;
+      top: 60.52632%; }
+      .sgf-viewer .stone:nth-child(124):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(125) {
+      left: 23.68421%;
+      top: 65.78947%; }
+      .sgf-viewer .stone:nth-child(125):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(126) {
+      left: 34.21053%;
+      top: 65.78947%; }
+      .sgf-viewer .stone:nth-child(126):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(127) {
+      left: 18.42105%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(127):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(128) {
+      left: 39.47368%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(128):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(129) {
+      left: 50%;
+      top: 23.68421%; }
+      .sgf-viewer .stone:nth-child(129):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(130) {
+      left: 60.52632%;
+      top: 23.68421%; }
+      .sgf-viewer .stone:nth-child(130):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(131) {
+      left: 65.78947%;
+      top: 18.42105%; }
+      .sgf-viewer .stone:nth-child(131):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(132) {
+      left: 76.31579%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(132):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(133) {
+      left: 71.05263%;
+      top: 50%; }
+      .sgf-viewer .stone:nth-child(133):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(134) {
+      left: 60.52632%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(134):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(135) {
+      left: 65.78947%;
+      top: 55.26316%; }
+      .sgf-viewer .stone:nth-child(135):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(136) {
+      left: 55.26316%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(136):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(137) {
+      left: 55.26316%;
+      top: 50%; }
+      .sgf-viewer .stone:nth-child(137):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(138) {
+      left: 50%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(138):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(139) {
+      left: 55.26316%;
+      top: 92.10526%; }
+      .sgf-viewer .stone:nth-child(139):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(140) {
+      left: 18.42105%;
+      top: 2.63158%; }
+      .sgf-viewer .stone:nth-child(140):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(141) {
+      left: 13.15789%;
+      top: 2.63158%; }
+      .sgf-viewer .stone:nth-child(141):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(142) {
+      left: 55.26316%;
+      top: 13.15789%; }
+      .sgf-viewer .stone:nth-child(142):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(143) {
+      left: 60.52632%;
+      top: 18.42105%; }
+      .sgf-viewer .stone:nth-child(143):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(144) {
+      left: 44.73684%;
+      top: 13.15789%; }
+      .sgf-viewer .stone:nth-child(144):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(145) {
+      left: 50%;
+      top: 18.42105%; }
+      .sgf-viewer .stone:nth-child(145):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(146) {
+      left: 2.63158%;
+      top: 65.78947%; }
+      .sgf-viewer .stone:nth-child(146):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(147) {
+      left: 2.63158%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(147):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(148) {
+      left: 2.63158%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(148):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(149) {
+      left: 2.63158%;
+      top: 28.94737%; }
+      .sgf-viewer .stone:nth-child(149):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(150) {
+      left: 18.42105%;
+      top: 7.89474%; }
+      .sgf-viewer .stone:nth-child(150):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(151) {
+      left: 13.15789%;
+      top: 13.15789%; }
+      .sgf-viewer .stone:nth-child(151):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(152) {
+      left: -2.63158%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(152):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(153) {
+      left: -2.63158%;
+      top: 81.57895%; }
+      .sgf-viewer .stone:nth-child(153):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(154) {
+      left: -2.63158%;
+      top: 71.05263%; }
+      .sgf-viewer .stone:nth-child(154):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(155) {
+      left: 2.63158%;
+      top: 81.57895%; }
+      .sgf-viewer .stone:nth-child(155):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(156) {
+      left: 86.84211%;
+      top: 65.78947%; }
+      .sgf-viewer .stone:nth-child(156):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(157) {
+      left: 65.78947%;
+      top: 23.68421%; }
+      .sgf-viewer .stone:nth-child(157):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(158) {
+      left: 65.78947%;
+      top: 28.94737%; }
+      .sgf-viewer .stone:nth-child(158):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(159) {
+      left: 86.84211%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(159):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(160) {
+      left: 81.57895%;
+      top: 2.63158%; }
+      .sgf-viewer .stone:nth-child(160):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(161) {
+      left: 86.84211%;
+      top: 2.63158%; }
+      .sgf-viewer .stone:nth-child(161):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(162) {
+      left: 76.31579%;
+      top: 2.63158%; }
+      .sgf-viewer .stone:nth-child(162):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(163) {
+      left: 28.94737%;
+      top: 13.15789%; }
+      .sgf-viewer .stone:nth-child(163):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(164) {
+      left: 34.21053%;
+      top: 13.15789%; }
+      .sgf-viewer .stone:nth-child(164):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(165) {
+      left: 7.89474%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(165):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(166) {
+      left: 7.89474%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(166):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(167) {
+      left: 13.15789%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(167):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(168) {
+      left: 2.63158%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(168):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(169) {
+      left: 28.94737%;
+      top: 18.42105%; }
+      .sgf-viewer .stone:nth-child(169):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(170) {
+      left: 28.94737%;
+      top: 2.63158%; }
+      .sgf-viewer .stone:nth-child(170):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(171) {
+      left: 28.94737%;
+      top: 28.94737%; }
+      .sgf-viewer .stone:nth-child(171):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(172) {
+      left: 18.42105%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(172):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(173) {
+      left: 23.68421%;
+      top: 23.68421%; }
+      .sgf-viewer .stone:nth-child(173):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(174) {
+      left: 23.68421%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(174):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(175) {
+      left: 86.84211%;
+      top: -2.63158%; }
+      .sgf-viewer .stone:nth-child(175):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(176) {
+      left: 13.15789%;
+      top: -2.63158%; }
+      .sgf-viewer .stone:nth-child(176):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(177) {
+      left: 7.89474%;
+      top: -2.63158%; }
+      .sgf-viewer .stone:nth-child(177):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(178) {
+      left: 18.42105%;
+      top: -2.63158%; }
+      .sgf-viewer .stone:nth-child(178):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(179) {
+      left: 7.89474%;
+      top: 2.63158%; }
+      .sgf-viewer .stone:nth-child(179):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(180) {
+      left: 13.15789%;
+      top: 60.52632%; }
+      .sgf-viewer .stone:nth-child(180):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(181) {
+      left: 13.15789%;
+      top: 23.68421%; }
+      .sgf-viewer .stone:nth-child(181):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(182) {
+      left: 18.42105%;
+      top: 28.94737%; }
+      .sgf-viewer .stone:nth-child(182):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(183) {
+      left: 7.89474%;
+      top: 28.94737%; }
+      .sgf-viewer .stone:nth-child(183):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(184) {
+      left: 44.73684%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(184):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(185) {
+      left: 34.21053%;
+      top: 18.42105%; }
+      .sgf-viewer .stone:nth-child(185):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(186) {
+      left: 55.26316%;
+      top: 60.52632%; }
+      .sgf-viewer .stone:nth-child(186):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(187) {
+      left: 34.21053%;
+      top: 7.89474%; }
+      .sgf-viewer .stone:nth-child(187):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(188) {
+      left: 65.78947%;
+      top: 92.10526%; }
+      .sgf-viewer .stone:nth-child(188):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(189) {
+      left: 60.52632%;
+      top: 60.52632%; }
+      .sgf-viewer .stone:nth-child(189):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(190) {
+      left: 65.78947%;
+      top: 60.52632%; }
+      .sgf-viewer .stone:nth-child(190):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(191) {
+      left: 71.05263%;
+      top: 92.10526%; }
+      .sgf-viewer .stone:nth-child(191):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(192) {
+      left: 71.05263%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(192):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(193) {
+      left: 76.31579%;
+      top: 81.57895%; }
+      .sgf-viewer .stone:nth-child(193):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(194) {
+      left: 18.42105%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(194):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(195) {
+      left: 23.68421%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(195):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(196) {
+      left: 34.21053%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(196):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(197) {
+      left: 39.47368%;
+      top: 18.42105%; }
+      .sgf-viewer .stone:nth-child(197):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(198) {
+      left: 44.73684%;
+      top: 18.42105%; }
+      .sgf-viewer .stone:nth-child(198):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(199) {
+      left: 39.47368%;
+      top: 7.89474%; }
+      .sgf-viewer .stone:nth-child(199):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(200) {
+      left: 76.31579%;
+      top: 55.26316%; }
+      .sgf-viewer .stone:nth-child(200):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(201) {
+      left: 23.68421%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(201):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(202) {
+      left: 23.68421%;
+      top: 50%; }
+      .sgf-viewer .stone:nth-child(202):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(203) {
+      left: 28.94737%;
+      top: 55.26316%; }
+      .sgf-viewer .stone:nth-child(203):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(204) {
+      left: 23.68421%;
+      top: 60.52632%; }
+      .sgf-viewer .stone:nth-child(204):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(205) {
+      left: 28.94737%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(205):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(206) {
+      left: 34.21053%;
+      top: 23.68421%; }
+      .sgf-viewer .stone:nth-child(206):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(207) {
+      left: 44.73684%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(207):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(208) {
+      left: 44.73684%;
+      top: 50%; }
+      .sgf-viewer .stone:nth-child(208):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(209) {
+      left: 28.94737%;
+      top: 81.57895%; }
+      .sgf-viewer .stone:nth-child(209):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(210) {
+      left: 28.94737%;
+      top: 86.84211%; }
+      .sgf-viewer .stone:nth-child(210):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(211) {
+      left: 92.10526%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(211):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(212) {
+      left: 92.10526%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(212):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(213) {
+      left: 92.10526%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(213):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(214) {
+      left: 28.94737%;
+      top: 50%; }
+      .sgf-viewer .stone:nth-child(214):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(215) {
+      left: 28.94737%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(215):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(216) {
+      left: 18.42105%;
+      top: 71.05263%; }
+      .sgf-viewer .stone:nth-child(216):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(217) {
+      left: 13.15789%;
+      top: 65.78947%; }
+      .sgf-viewer .stone:nth-child(217):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(218) {
+      left: 81.57895%;
+      top: -2.63158%; }
+      .sgf-viewer .stone:nth-child(218):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(219) {
+      left: 76.31579%;
+      top: -2.63158%; }
+      .sgf-viewer .stone:nth-child(219):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(220) {
+      left: 60.52632%;
+      top: 13.15789%; }
+      .sgf-viewer .stone:nth-child(220):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(221) {
+      left: 55.26316%;
+      top: 7.89474%; }
+      .sgf-viewer .stone:nth-child(221):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(222) {
+      left: -2.63158%;
+      top: 39.47368%; }
+      .sgf-viewer .stone:nth-child(222):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(223) {
+      left: -2.63158%;
+      top: 44.73684%; }
+      .sgf-viewer .stone:nth-child(223):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(224) {
+      left: -2.63158%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(224):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(225) {
+      left: 76.31579%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(225):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(226) {
+      left: 76.31579%;
+      top: 18.42105%; }
+      .sgf-viewer .stone:nth-child(226):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(227) {
+      left: 13.15789%;
+      top: 34.21053%; }
+      .sgf-viewer .stone:nth-child(227):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(228) {
+      left: 23.68421%;
+      top: 7.89474%; }
+      .sgf-viewer .stone:nth-child(228):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(229) {
+      left: 23.68421%;
+      top: 2.63158%; }
+      .sgf-viewer .stone:nth-child(229):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(230) {
+      left: 23.68421%;
+      top: 13.15789%; }
+      .sgf-viewer .stone:nth-child(230):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(231) {
+      left: 60.52632%;
+      top: 71.05263%; }
+      .sgf-viewer .stone:nth-child(231):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(232) {
+      left: 39.47368%;
+      top: 23.68421%; }
+      .sgf-viewer .stone:nth-child(232):before {
+        background-color: black; }
+    .sgf-viewer .stone:nth-child(233) {
+      left: 60.52632%;
+      top: 76.31579%; }
+      .sgf-viewer .stone:nth-child(233):before {
+        background-color: #e6e6e6; }
+    .sgf-viewer .stone:nth-child(234) {
+      left: 65.78947%;
+      top: 65.78947%; }
+      .sgf-viewer .stone:nth-child(234):before {
+        background-color: black; }

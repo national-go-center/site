@@ -8,6 +8,15 @@ html
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		
+		link(rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png")
+		link(rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32")
+		link(rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16")
+		link(rel="manifest" href="/images/favicons/manifest.json")
+		link(rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5")
+		link(rel="shortcut icon" href="/images/favicons/favicon.ico")
+		meta(name="msapplication-config" content="/images/favicons/browserconfig.xml")
+		meta(name="theme-color" content="#ffffff")
 
 		title= title || 'National Go Center'
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
@@ -32,60 +41,70 @@ html
 		//- Add any other template-specific HEAD tags by extending the head block
 		block head
 
+	block vars
+		
 	//- HTML BODY
-	body
+	body(class='section-#{section}')
 
-		//- HEADER
-		#header: .container-fluid
+		.container-fluid
+			.col-md-2.hidden-sm.hidden-xs
+				img.ngc-logo(src='/images/ngc-logo-4.svg' alt='National Go Center')
 
-			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
-			//- ... or completely change this header to suit your design.
+			.col-md-10.position-static
 
-			div(role="navigation").navbar.navbar-default.navbar-fixed-top
-				.container-fluid
-					.navbar-header
-						button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-							span.sr-only Toggle navigation
-							span.icon-bar
-							span.icon-bar
-							span.icon-bar
-						a.navbar-brand(href='/')
-							img.ngc-logo(src='/images/ngc-logo.svg' alt='National Go Center')
+				//- HEADER
+				#header: .container-fluid
 
-					.collapse.navbar-collapse
-						ul.nav.navbar-nav.navbar-left
-							each link in navLinks
-								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-						ul.nav.navbar-nav.navbar-right
-							if user
-								if user.canAccessKeystone
-									li: a(href='/keystone') Open Keystone
-								li: a(href='/keystone/signout') Sign Out
-							else
-								li: a(href='/keystone/signin') Sign In
+					//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
+					//- ... or completely change this header to suit your design.
 
-		//- BODY
-		#body
+					div(role="navigation").navbar.navbar-default.navbar-fixed-top
+						.container-fluid
+							.col-md-2.hidden-sm-block.hidden-xs-block
+							.col-md-10
+								.navbar-header
+									button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+										span.sr-only Toggle navigation
+										span.icon-bar
+										span.icon-bar
+										span.icon-bar
+									a.navbar-brand.visible-sm-block.visible-xs-block(href='/')
+										img.ngc-logo(src='/images/ngc-logo-3-horizontal.svg' alt='National Go Center')
 
-			//- NOTE:
-			//- There is no .container wrapping class around body blocks to allow more flexibility in design.
-			//- Remember to include it in your templates when you override the intro and content blocks!
+								.collapse.navbar-collapse
+									ul.nav.navbar-nav.navbar-left
+										each link in navLinks
+											li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+									ul.nav.navbar-nav.navbar-right
+										if user
+											if user.canAccessKeystone
+												li: a(href='/keystone') Open Keystone
+											li: a(href='/keystone/signout') Sign Out
+										else
+											li: a(href='/keystone/signin') Sign In
 
-			//- The Intro block appears above flash messages (used for temporary information display)
-			block intro
+				//- BODY
+				#body
 
-			//- Flash messages allow you to display once-off status messages to users, e.g. form
-			//- validation errors, success messages, etc.
-			+flash-messages(messages)
+					//- NOTE:
+					//- There is no .container wrapping class around body blocks to allow more flexibility in design.
+					//- Remember to include it in your templates when you override the intro and content blocks!
 
-			//- The content block should contain the body of your template's content
-			block content
+					//- The Intro block appears above flash messages (used for temporary information display)
+					block intro
+
+					//- Flash messages allow you to display once-off status messages to users, e.g. form
+					//- validation errors, success messages, etc.
+					+flash-messages(messages)
+
+					//- The content block should contain the body of your template's content
+					block content
 
 
-		//- FOOTER
-		.container-fluid: #footer
+				//- FOOTER
+				.container-fluid: #footer
 
-			p &copy; 2016 National Go Center
+					p &copy; 2016 National Go Center
 
 
 		//- JAVASCRIPT
@@ -105,6 +124,7 @@ html
 			script(src='/keystone/js/content/editor.js')
 
 		//- Add scripts that are globally required by your site here.
+		script(src='/js/bundle.js')
 
 		//- Include template-specific javascript files by extending the js block
 		block js

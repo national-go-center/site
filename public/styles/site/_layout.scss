@@ -1,33 +1,130 @@
+body {
+	background: {
+		attachment: fixed;
+		image: url('/images/jonathan-hop.jpg');
+		position: 100% 0;
+		size: cover;
+	}
+
+	#body [class*='col-'] {
+		padding: 10px 25px 15px 25px;
+	}
+}
+
+.position-static {
+	position: static;
+}
+
 #header {
-	margin-top: 30px;
+}
+
+.ngc-logo {
+	position: relative;
+	z-index: 1031; // wat
+}
+
+.navbar-fixed-top {
+	border: 0;
 }
 
 .navbar-brand {
-	width: 200px;
-
+	//outline: 1px solid red;
+	padding: {
+		top: 6px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	};
+	width: 230px;
 	> img {
-		margin-top: -11px;
+		width: 100%;
 	}
+}
+
+.navbar-nav {
+	font: {
+		family: $headings-font-family;
+		weight: 700;
+	}
+	letter-spacing: 1px;
+	text-transform: uppercase;
 }
 
 #body {
 	padding: {
-		left: 185px;
+		top: 40px;
 	}
 }
 
 #footer {
 	margin-top: 30px;
-	border-top: 1px solid #eeeeee;
 	padding: {
-		left: 235px;
 		top: 30px;
 	}
 	color: #777777;
 }
 
-.gallery-image img{
+.gallery-image img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+#sgf-player {
+	background: hsl(40, 70%, 65%);
+	position: absolute;
+	left: -100px;
+	right: -100px;
+	top: -100px;
+}
+
+.homepage-feature {
+	background: hsla(0, 0%, 20%, 0.5);
+	h1 {
+		color: hsla(0, 0%, 100%, 0.7);
+	}
+	
+	p {
+		color: hsl(0, 0%, 100%);
+		font: {
+			size: 18px;
+		}
+	}
+	
+}
+
+.what-is-go {
+	background: transparentize(white, 0.2);
+	
+	font: {
+		size: 18px;
+	}
+	
+	ul {}
+}
+
+.recent-news {
+	background: transparentize($gray-darker, 0.2);
+	
+	h2 {
+		color: $gray-lighter
+	}
+	
+	font: {
+		size: 18px;
+	}
+}
+
+.row.is-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.primary-content {
+	background: hsla(0, 0%, 100%, 0.8);
 }

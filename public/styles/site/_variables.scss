@@ -1,4 +1,8 @@
 // Override Bootstrap variables in this file, e.g.
 
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,300,400,700);
+
 $font-size-base: 14px;
 
+$font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$headings-font-family:  Exo, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;

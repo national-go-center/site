@@ -1,7 +1,35 @@
 extends ../layouts/default
 
 block content
-	.container-fluid: .jumbotron
+	.row
+		.col-md-12.homepage-feature
+			h1 Coming soon to Washington!
+					
+			p The National Go Center will be a home for regular play, tournaments, instruction, and educational&nbsp;outreach.
+			
+			p.clearfix
+				a.btn.btn-primary.btn-lg.pull-right(href='/news/post/national-go-center-planned-for-dc') Learn More
+				
+	.row.is-flex
+		.col-md-6.what-is-go
+				h2 What is Go?
+				
+				p <strong>Go is the hardest, deepest, best game humans play.</strong> Its rules are incredibly simple, but the strategy and tactics that emerge from them are vast and profound. Many players around the world spend lifetimes trying to improve their play. There are highly competitive organizations of professional players in many countries in Asia, and emerging professional players in the United States and Europe.
+				
+				ul
+					li
+						a(href='http://playgo.to/iwtg/en/') Learn to play
+					li
+						a(href='http://www.usgo.org/what-go') Read more about go at the American Go Association
+					
+		.col-md-6.recent-news
+				h2 Recent News
+				ul
+				each post in data.posts.results
+					li
+						a(href='/news/post/#{post.slug}') #{post.title}
+
+	//.container-fluid: .jumbotron
 		h2 National Go Center Planned for DC
 		time(style='margin-bottom: 1em; display: block;') Friday July 8, 2016
 		p <a href='http://www.inaf-go.org/iwamoto/'>The Iwamoto North American Foundation for Go</a> at its meeting in Tokyo on Thursday announced plans to establish a National Go Center in 2016. Go recently garnered global headlines when Google DeepMind’s AlphaGo AI program defeated top professional Lee Sedol and the National Go Center is intended to build on the increased public awareness and interest in the ancient game.
