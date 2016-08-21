@@ -2,13 +2,16 @@
   "name": "national-go-center",
   "version": "0.0.0",
   "private": true,
+  "main": "keystone.js",
   "dependencies": {
     "async": "^1.5.0",
     "dotenv": "^2.0.0",
-    "keystone": "^0.3.19",
+    "keystone": "^0.3.22",
     "lodash": "^4.13.1",
-    "node-sass": "^3.3.2",
+    "node-sass": "^3.8.0",
     "node-sass-middleware": "^0.9.7",
+    "node-supervisor": "^1.0.2",
+    "restart": "0.0.4",
     "wgo": "^3.0.0-alpha.1"
   },
   "devDependencies": {
@@ -21,6 +24,7 @@
     "gulp-shell": "^0.5.0",
     "gulp-watch": "^4.3.5",
     "lodash": "^4.14.1",
+    "nodemon": "^1.10.1",
     "webpack": "^1.13.1"
   },
   "scripts": {

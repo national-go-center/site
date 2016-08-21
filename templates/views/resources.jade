@@ -2,36 +2,64 @@ extends ../layouts/default
 
 block content
 	.row
-		.col-md-12.feature.homepage-feature
+		.col-md-12.feature
 			.full-background(style='background-image: url(/images/jonathan-hop.jpg)')
 			.row
 				.col-md-10.col-md-offset-2
-					h1 Coming soon to Washington!
+					h1 Resources
+
+		.col-md-10.col-md-offset-2
+			.row
+				.col-md-12
+					h2 Learning to play
+					
+					ul
+						li
+							a(href='http://playgo.to/iwtg/en/') The Interactive Way To Go
+						li: a(href='http://www.usgo.org/learn-play') Learn to Play Go at the American Go Association
+						li: a(href='http://senseis.xmp.net/?BasicRulesOfGo') The Basic Rules of Go at Sensei's Library
+						
+					h2 Where to play in person
+					
+					ul
+						li
+							p Soon, at the National Go Center!
+						li
+							a(href='http://users.erols.com/jgoon/gwgcmain.htm') The Greater Washington Go Club
+							p The GWGC meets every Friday evening, starting at 8:00 PM, in room 15 of the basement of the Cedar Lane Unitarian Church, 9601 Cedar Lane, Bethesda, MD. 
 							
-					p The National Go Center will be a home for regular play, tournaments, instruction, and educational&nbsp;outreach.
+						li
+							a(href='http://www.novagoclub.org/') NOVA Go Club
+							p The Arlington Club has been meeting every Monday from 7 &ndash; 11 PM for 36 years.
+						
+					h2 Where to play online
 					
-					p.clearfix
-						a.btn.btn-primary.btn-lg.pull-right(href='/news/post/national-go-center-planned-for-dc') Learn More
-				
-	.row
-		.col-md-5.col-md-offset-2.what-is-go
-				h2 What is Go?
-				
-				p: b Go is the hardest, deepest, best game humans play.
-				p Its rules are incredibly simple, but the strategy and tactics that emerge from them are vast and profound. Many players around the world spend lifetimes trying to improve their play. There are highly competitive organizations of professional players in many countries in Asia, and emerging professional players in the United States and Europe.
-				
-				ul
-					li
-						a(href='http://playgo.to/iwtg/en/') Learn to play
-					li
-						a(href='http://www.usgo.org/what-go') Read more about go at the American Go Association
+					ul
+						li: a(href='http://www.gokgs.com/') The KGS Go Server
+						li: a(href='https://online-go.com') Online Go Server (OGS)
+						li: a(href='http://pandanet-igs.com/') Pandanet (IGS)
+						li: a(href='http://www.tygemgo.com/') TygemGo
+						li: a(href='http://www.wbaduk.com/') WBaduk &ndash; World Baduk Service
+						li: a(href='http://www.dragongoserver.net/') Dragon Go Server (DGS)
+						
+					h2 Go Study
 					
-		.col-md-5.recent-news
-				h2 Recent News
-				ul
-				each post in data.posts.results
-					li
-						a(href='/news/post/#{post.slug}') #{post.title}
+					ul
+						li
+							a(href='https://gokibitz.com') Go Kibitz
+							p Move-by-move conversations about go game records.
+						li
+							a(href='http://eidogo.com/') EidoGo
+							p Web-based SGF viewer and editor.
+						li
+							a(href='http://josekipedia.com/') Josekipedia
+							p Collaborative joseki dictionary.
+					
+					h2 Go Development Resources
+					
+					ul
+						li: a(href='https://github.com/waltheri/go-libraries') Go Libraries
+				
 
 	//.container-fluid: .jumbotron
 		h2 National Go Center Planned for DC

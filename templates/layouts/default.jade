@@ -47,10 +47,10 @@ html
 	body(class='section-#{section}')
 
 		.container-fluid
-			.col-md-2.hidden-sm.hidden-xs
+			.col-md-2.p-absolute.hidden-sm.hidden-xs
 				img.ngc-logo(src='/images/ngc-logo-4.svg' alt='National Go Center')
 
-			.col-md-10.position-static
+			.col-md-12
 
 				//- HEADER
 				#header: .container-fluid
@@ -60,28 +60,28 @@ html
 
 					div(role="navigation").navbar.navbar-default.navbar-fixed-top
 						.container-fluid
-							.col-md-2.hidden-sm-block.hidden-xs-block
-							.col-md-10
-								.navbar-header
-									button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-										span.sr-only Toggle navigation
-										span.icon-bar
-										span.icon-bar
-										span.icon-bar
-									a.navbar-brand.visible-sm-block.visible-xs-block(href='/')
-										img.ngc-logo(src='/images/ngc-logo-3-horizontal.svg' alt='National Go Center')
+							.row
+								.col-md-10.col-md-offset-2
+									.navbar-header
+										button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+											span.sr-only Toggle navigation
+											span.icon-bar
+											span.icon-bar
+											span.icon-bar
+										a.navbar-brand.visible-sm-block.visible-xs-block(href='/')
+											img.ngc-logo(src='/images/ngc-logo-3-horizontal.svg' alt='National Go Center')
 
-								.collapse.navbar-collapse
-									ul.nav.navbar-nav.navbar-left
-										each link in navLinks
-											li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-									ul.nav.navbar-nav.navbar-right
-										if user
-											if user.canAccessKeystone
-												li: a(href='/keystone') Open Keystone
-											li: a(href='/keystone/signout') Sign Out
-										else
-											li: a(href='/keystone/signin') Sign In
+									.collapse.navbar-collapse
+										ul.nav.navbar-nav.navbar-left
+											each link in navLinks
+												li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+										ul.nav.navbar-nav.navbar-right
+											if user
+												if user.canAccessKeystone
+													li: a(href='/keystone') Open Keystone
+												li: a(href='/keystone/signout') Sign Out
+											else
+												li: a(href='/keystone/signin') Sign In
 
 				//- BODY
 				#body
@@ -103,8 +103,9 @@ html
 
 				//- FOOTER
 				.container-fluid: #footer
-
-					p &copy; 2016 National Go Center
+					.row
+						.col-md-10.col-md-offset-2
+							p &copy; 2016 National Go Center
 
 
 		//- JAVASCRIPT

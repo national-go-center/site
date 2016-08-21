@@ -9,11 +9,11 @@ exports = module.exports = function (req, res) {
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'home';
-	
+
 	locals.data = {
 		posts: []
 	};
-	
+
 	view.on('init', function (next) {
 
 		var q = keystone.list('Post').paginate({

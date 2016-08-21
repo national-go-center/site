@@ -26,10 +26,16 @@ block intro
 	.row
 		.col-md-12.primary-content
 			h1= data.category ? data.category.name : 'News'
+			p FOOOOOOO
 
 block content
 	.row
-		.col-md-12.primary-content
+		.col-md-12.feature
+			.full-background(style='background-image: url(/images/jonathan-hop.jpg)')
+			.row
+				.col-md-10.col-md-offset-2
+					h1 News
+		.col-md-10.col-md-offset-2
 			if filters.category && !data.category
 				h3.text-muted Invalid Category.
 			else
