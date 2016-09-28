@@ -14,7 +14,7 @@ keystone.init({
 	'brand': 'National Go Center',
 
 	'sass': 'public',
-	'static': 'public',
+	'static': ['public', 'files'],
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'jade',
