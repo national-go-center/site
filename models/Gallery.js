@@ -13,8 +13,22 @@ var Gallery = new keystone.List('Gallery', {
 Gallery.add({
 	name: { type: String, required: true },
 	publishedDate: { type: Date, default: Date.now },
-	heroImage: { type: Types.CloudinaryImage },
-	images: { type: Types.CloudinaryImages },
+	heroImage: { //These types will change in version 4 https://github.com/keystonejs/keystone/tree/master/lib/storage/adapters/fs
+	   type: Types.LocalFile,
+	   dest: './files/hero/',
+       prefix: '/hero/',
+       format: function(item, file) {
+          return '<img src="' + file.href + '" >'
+       }
+    },
+	images: { 
+	   type: Types.LocalFiles,
+	   dest: './files/gallery/',
+       prefix: '/gallery/',
+       format: function(item, file) {
+          return '<img src="' + file.href + '" >'
+       }
+	},
 });
 
 Gallery.register();
