@@ -30,6 +30,7 @@ exports.initLocals = function (req, res, next) {
 		{ label: 'Home', key: 'home', href: '/' },
 		{ label: 'News', key: 'news', href: '/news' },
 		{ label: 'Resources', key: 'resources', href: '/resources' },
+		{ label: 'Forum', key: 'forum', href: 'http://forum.nationalgocenter.org' },
 		{ label: 'Contact', key: 'contact', href: '/contact' }
 	];
 	res.locals.user = req.user;

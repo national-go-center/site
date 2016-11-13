@@ -32,6 +32,15 @@ block content
 				each post in data.posts.results
 					li
 						a(href='/news/post/#{post.slug}') #{post.title}
+					
+		.col-md-5.recent-news
+			h2 From the
+				= ' '
+				a(href='http://forum.nationalgocenter.org') Forum
+			ul
+				each item in data.forumFeed.data.items
+					li
+						a(href='#{item.link}') !{item.title}
 
 	//.container-fluid: .jumbotron
 		h2 National Go Center Planned for DC
