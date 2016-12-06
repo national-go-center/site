@@ -1,58 +1,44 @@
 extends ../layouts/default
 
+block intro
+	h1 Coming soon to Washington!
+
+	p The National Go Center will be a home for regular play, tournaments, instruction, and educational&nbsp;outreach.
+
+	p.clearfix
+		a.btn.btn-primary.btn-lg.pull-right(href='/news/post/national-go-center-planned-for-dc') Learn More
+
 block content
 	.row
-		.col-md-12.feature.homepage-feature
-			.full-background(style='background-image: url(/images/jonathan-hop.jpg)')
-			.row
-				.col-md-10.col-md-offset-2
-					h1 Coming soon to Washington!
-							
-					p The National Go Center will be a home for regular play, tournaments, instruction, and educational&nbsp;outreach.
-					
-					p.clearfix
-						a.btn.btn-primary.btn-lg.pull-right(href='/news/post/national-go-center-planned-for-dc') Learn More
-				
-	.row
-		.col-md-5.col-md-offset-2.what-is-go
-				h2 What is Go?
-				
-				p: b Go is the hardest, deepest, best game humans play.
-				p Its rules are incredibly simple, but the strategy and tactics that emerge from them are vast and profound. Many players around the world spend lifetimes trying to improve their play. There are highly competitive organizations of professional players in many countries in Asia, and emerging professional players in the United States and Europe.
-				
-				ul
-					li
-						a(href='http://playgo.to/iwtg/en/') Learn to play
-					li
-						a(href='http://www.usgo.org/what-go') Read more about go at the American Go Association
+		.col-md-7.what-is-go
+			h2 What is Go?
+			
+			p: b Go is the hardest, deepest, best game humans&nbsp;play.
+			p Its rules are incredibly simple, but the strategy and tactics that emerge from them are vast and profound. Many players around the world spend lifetimes trying to improve their play. There are highly competitive organizations of professional players in many countries in Asia, and emerging professional players in the United States and Europe.
+			
+			ul
+				li
+					a(href='http://playgo.to/iwtg/en/') Learn to play
+				li
+					a(href='http://www.usgo.org/what-go') Read more about go at the American Go Association
 					
 		.col-md-5.recent-news
-				h2 Recent News
-				ul
+			h2 Recent News
+			ul
 				each post in data.posts.results
 					li
-						a(href='/news/post/#{post.slug}') #{post.title}
+						a(href=`/news/post/${post.slug}`) #{post.title}
 					
 		.col-md-5.recent-news
-			h2 From the
-				= ' '
-				a(href='http://forum.nationalgocenter.org') Forum
+			h2 Announcements
 			ul
-				each item in data.forumFeed.data.items
+				each item in data.announcements.items
 					li
 						a(href='#{item.link}') !{item.title}
-
-	//.container-fluid: .jumbotron
-		h2 National Go Center Planned for DC
-		time(style='margin-bottom: 1em; display: block;') Friday July 8, 2016
-		p <a href='http://www.inaf-go.org/iwamoto/'>The Iwamoto North American Foundation for Go</a> at its meeting in Tokyo on Thursday announced plans to establish a National Go Center in 2016. Go recently garnered global headlines when Google DeepMind’s AlphaGo AI program defeated top professional Lee Sedol and the National Go Center is intended to build on the increased public awareness and interest in the ancient game.
-
-		p In addition to its role in advancing artificial intelligence, many studies have shown that go can improve student performance through development of logical and spatial thinking and even to help students with ADHD. A primary mission of the new Center is to work with educators in the region to promote go in schools from primary grades through college.
-
-		p The Center will also have the mission of developing strong amateur go players in the region who can represent the US in conjunction with the American Go Association at the regional, national, and international levels. Building on an already strong tournament calendar, regional and interscholastic qualifying tournaments are planned.
-
-		p Organizers of the National Go Center include many AGA volunteers and leaders from the metro Washington region, where there is a long history of promoting go education, developing cultural activities associated with the game, and training strong go players in many of the regional clubs. &ldquo;It is expected that the new Center will add to the synergy to make the DC area a true national center for go,&rdquo; said AGA president Andy Okun.
-
-		h2 Stay tuned!
-
-		p Our website is currently under development. We&rsquo;ll have lots more coming soon.
+					
+			h2 Events
+			ul
+				each item in data.events.items
+					li
+						a(href='#{item.link}') !{item.title}
+					

@@ -39,14 +39,22 @@ body {
 .navbar-brand {
 	//outline: 1px solid red;
 	padding: {
-		top: 6px;
-		right: 0;
+		top: 8px;
+		right: 10px;
 		bottom: 0;
 		left: 0;
 	};
 	width: 230px;
 	> img {
 		width: 100%;
+	}
+}
+
+@media (min-width: 768px) {
+	.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+		margin: {
+			left: 0;
+		}
 	}
 }
 
@@ -75,11 +83,13 @@ body {
 }
 
 #footer {
-	margin-top: 30px;
-	padding: {
-		top: 30px;
+	p {
+		margin-top: 30px;
+		padding: {
+			top: 30px;
+		}
+		color: #777777;
 	}
-	color: #777777;
 }
 
 .gallery-image img {
@@ -104,7 +114,7 @@ body {
 	padding: {
 		bottom: 8px;
 	}
-	h1 {
+	h1, h2, h3, h4, h5 {
 		color: white;
 		font: {
 			weight: 500;

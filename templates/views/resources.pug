@@ -1,77 +1,54 @@
 extends ../layouts/default
 
+block intro
+	h1 Resources
+	
 block content
-	.row
-		.col-md-12.feature
-			.full-background(style='background-image: url(/images/jonathan-hop.jpg)')
-			.row
-				.col-md-10.col-md-offset-2
-					h1 Resources
+	h2 Learning to play
 
-		.col-md-10.col-md-offset-2
-			.row
-				.col-md-12
-					h2 Learning to play
-					
-					ul
-						li
-							a(href='http://playgo.to/iwtg/en/') The Interactive Way To Go
-						li: a(href='http://www.usgo.org/learn-play') Learn to Play Go at the American Go Association
-						li: a(href='http://senseis.xmp.net/?BasicRulesOfGo') The Basic Rules of Go at Sensei's Library
-						
-					h2 Where to play in person
-					
-					ul
-						li
-							p Soon, at the National Go Center!
-						li
-							a(href='http://users.erols.com/jgoon/gwgcmain.htm') The Greater Washington Go Club
-							p The GWGC meets every Friday evening, starting at 8:00 PM, in room 15 of the basement of the Cedar Lane Unitarian Church, 9601 Cedar Lane, Bethesda, MD. 
-							
-						li
-							a(href='http://www.novagoclub.org/') NOVA Go Club
-							p The Arlington Club has been meeting every Monday from 7 &ndash; 11 PM for 36 years.
-						
-					h2 Where to play online
-					
-					ul
-						li: a(href='http://www.gokgs.com/') The KGS Go Server
-						li: a(href='https://online-go.com') Online Go Server (OGS)
-						li: a(href='http://pandanet-igs.com/') Pandanet (IGS)
-						li: a(href='http://www.tygemgo.com/') TygemGo
-						li: a(href='http://www.wbaduk.com/') WBaduk &ndash; World Baduk Service
-						li: a(href='http://www.dragongoserver.net/') Dragon Go Server (DGS)
-						
-					h2 Go Study
-					
-					ul
-						li
-							a(href='https://gokibitz.com') Go Kibitz
-							p Move-by-move conversations about go game records.
-						li
-							a(href='http://eidogo.com/') EidoGo
-							p Web-based SGF viewer and editor.
-						li
-							a(href='http://josekipedia.com/') Josekipedia
-							p Collaborative joseki dictionary.
-					
-					h2 Go Development Resources
-					
-					ul
-						li: a(href='https://github.com/waltheri/go-libraries') Go Libraries
-				
+	ul
+		li
+			a(href='http://playgo.to/iwtg/en/') The Interactive Way To Go
+		li: a(href='http://www.usgo.org/learn-play') Learn to Play Go at the American Go Association
+		li: a(href='http://senseis.xmp.net/?BasicRulesOfGo') The Basic Rules of Go at Sensei's Library
 
-	//.container-fluid: .jumbotron
-		h2 National Go Center Planned for DC
-		time(style='margin-bottom: 1em; display: block;') Friday July 8, 2016
-		p <a href='http://www.inaf-go.org/iwamoto/'>The Iwamoto North American Foundation for Go</a> at its meeting in Tokyo on Thursday announced plans to establish a National Go Center in 2016. Go recently garnered global headlines when Google DeepMind’s AlphaGo AI program defeated top professional Lee Sedol and the National Go Center is intended to build on the increased public awareness and interest in the ancient game.
+	h2 Where to play in person
 
-		p In addition to its role in advancing artificial intelligence, many studies have shown that go can improve student performance through development of logical and spatial thinking and even to help students with ADHD. A primary mission of the new Center is to work with educators in the region to promote go in schools from primary grades through college.
+	ul
+		li
+			p Soon, at the National Go Center!
+		li
+			a(href='http://users.erols.com/jgoon/gwgcmain.htm') The Greater Washington Go Club
+			p The GWGC meets every Friday evening, starting at 8:00 PM, in room 15 of the basement of the Cedar Lane Unitarian Church, 9601 Cedar Lane, Bethesda, MD.
 
-		p The Center will also have the mission of developing strong amateur go players in the region who can represent the US in conjunction with the American Go Association at the regional, national, and international levels. Building on an already strong tournament calendar, regional and interscholastic qualifying tournaments are planned.
+		li
+			a(href='http://www.novagoclub.org/') NOVA Go Club
+			p The Arlington Club has been meeting every Monday from 7 &ndash; 11 PM for 36 years.
 
-		p Organizers of the National Go Center include many AGA volunteers and leaders from the metro Washington region, where there is a long history of promoting go education, developing cultural activities associated with the game, and training strong go players in many of the regional clubs. &ldquo;It is expected that the new Center will add to the synergy to make the DC area a true national center for go,&rdquo; said AGA president Andy Okun.
+	h2 Where to play online
 
-		h2 Stay tuned!
+	ul
+		li: a(href='http://www.gokgs.com/') The KGS Go Server
+		li: a(href='https://online-go.com') Online Go Server (OGS)
+		li: a(href='http://pandanet-igs.com/') Pandanet (IGS)
+		li: a(href='http://www.tygemgo.com/') TygemGo
+		li: a(href='http://www.wbaduk.com/') WBaduk &ndash; World Baduk Service
+		li: a(href='http://www.dragongoserver.net/') Dragon Go Server (DGS)
 
-		p Our website is currently under development. We&rsquo;ll have lots more coming soon.
+	h2 Go Study
+
+	ul
+		li
+			a(href='https://gokibitz.com') Go Kibitz
+			p Move-by-move conversations about go game records.
+		li
+			a(href='http://eidogo.com/') EidoGo
+			p Web-based SGF viewer and editor.
+		li
+			a(href='http://josekipedia.com/') Josekipedia
+			p Collaborative joseki dictionary.
+
+	h2 Go Development Resources
+
+	ul
+		li: a(href='https://github.com/waltheri/go-libraries') Go Libraries

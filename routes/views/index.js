@@ -3,10 +3,23 @@ var async = require('async');
 var fastFeed = require('fast-feed');
 var http = require('http');
 
-var forumFeed = {
-	// Cache the feed for five minutes
+var feedOptions = {
+	// Cache feeds for five minutes
 	cacheDuration: 1000 * 60 * 5
 };
+
+var feeds = [
+	{
+		name: 'announcements',
+		hostname: 'forum.nationalgocenter.org',
+		path: '/category/1.rss'
+	},
+	{
+		name: 'events',
+		hostname: 'forum.nationalgocenter.org',
+		path: '/category/9.rss'
+	}
+];
 
 exports = module.exports = function (req, res) {
 
@@ -41,39 +54,57 @@ exports = module.exports = function (req, res) {
 	
 	// Get recent items from the NGC's forum via RSS feed
 	view.on('init', function (next) {
-		// If we haven't fetched the feed yet, or the cache has expired, fetch it now
-		if (
-			!forumFeed.lastFetched
-			|| Date.now() > forumFeed.lastFetched + forumFeed.cacheDuration
-		) {
-			var req = http.request({
-				hostname: 'forum.nationalgocenter.org',
-				port: '80',
-				path: '/category/1.rss',
-				method: 'GET'
-			}, function (res) {
-				res.setEncoding('utf8');
-				var xmlString = '';
-				res.on('data', function (chunk) {
-					xmlString += chunk;
+		var i = 0;
+		
+		function fetchFeed(feed, callback) {
+			if (
+				!feed.lastFetched
+				|| Date.now() > feed.lastFetched + feedOptions.cacheDuration
+			) {
+				var req = http.request({
+					hostname: feed.hostname,
+					port: '80',
+					path: feed.path,
+					method: 'GET'
+				}, function (res) {
+					res.setEncoding('utf8');
+					var xmlString = '';
+					res.on('data', function (chunk) {
+						xmlString += chunk;
+					});
+
+					res.on('end', function () {
+						feed.xmlString = xmlString;
+						feed.data = fastFeed.parse(xmlString);
+						feed.lastFetched = Date.now();
+						locals.data[feed.name] = feed.data;
+						callback();
+					});
 				});
 
-				res.on('end', function () {
-					forumFeed.xmlString = xmlString;
-					forumFeed.data = fastFeed.parse(xmlString);
-					forumFeed.lastFetched = Date.now();
-					locals.data.forumFeed = forumFeed;
-					next();
+				req.on('error', function (e) {
+					callback(e);
 				});
-			});
 
-			req.on('error', function (e) {
-				next(e);
-			});
-			
-			req.end();
+				req.end();
+			} else {
+				locals.data[feed.name] = feed.data;
+				callback();
+			}
+		}
+		
+		function feedCallback() {
+			i += 1;
+			if (i >= feeds.length) {
+				next();
+			} else {
+				fetchFeed(feeds[i], feedCallback);
+			}
+		}
+		
+		if (feeds.length) {
+			fetchFeed(feeds[i], feedCallback);
 		} else {
-			locals.data.forumFeed = forumFeed;
 			next();
 		}
 	});

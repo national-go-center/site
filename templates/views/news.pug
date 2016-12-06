@@ -23,60 +23,50 @@ mixin post(post)
 			p.read-more: a(href='/news/post/' + post.slug) Read more...
 
 block intro
-	.row
-		.col-md-12.primary-content
-			h1= data.category ? data.category.name : 'News'
-			p FOOOOOOO
+	h1 News
 
 block content
-	.row
-		.col-md-12.feature
-			.full-background(style='background-image: url(/images/jonathan-hop.jpg)')
-			.row
-				.col-md-10.col-md-offset-2
-					h1 News
-		.col-md-10.col-md-offset-2
-			if filters.category && !data.category
-				h3.text-muted Invalid Category.
+	if filters.category && !data.category
+		h3.text-muted Invalid Category.
+	else
+		if data.posts.results.length
+			if data.posts.totalPages > 1
+				h4.text-weight-normal Showing
+					strong #{data.posts.first}
+					|  to
+					strong #{data.posts.last}
+					|  of
+					strong #{data.posts.total}
+					|  posts.
 			else
-				if data.posts.results.length
-					if data.posts.totalPages > 1
-						h4.text-weight-normal Showing 
-							strong #{data.posts.first}
-							|  to 
-							strong #{data.posts.last}
-							|  of 
-							strong #{data.posts.total}
-							|  posts.
+				h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
+			.news
+				each post in data.posts.results
+					+post(post)
+
+			if data.posts.totalPages > 1
+				ul.pagination
+					if data.posts.previous
+						li: a(href='?page=' + data.posts.previous): span.glyphicon.glyphicon-chevron-left
 					else
-						h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
-					.news
-						each post in data.posts.results
-							+post(post)
-					
-					if data.posts.totalPages > 1
-						ul.pagination
-							if data.posts.previous
-								li: a(href='?page=' + data.posts.previous): span.glyphicon.glyphicon-chevron-left
-							else
-								li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
-							each p, i in data.posts.pages
-								li(class=data.posts.currentPage == p ? 'active' : null)
-									a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
-							if data.posts.next
-								li: a(href='?page=' + data.posts.next): span.glyphicon.glyphicon-chevron-right
-							else
-								li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
-				else
-					if data.category
-						h3.text-muted There are no posts in the category #{data.category.name}.
+						li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
+					each p, i in data.posts.pages
+						li(class=data.posts.currentPage == p ? 'active' : null)
+							a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
+					if data.posts.next
+						li: a(href='?page=' + data.posts.next): span.glyphicon.glyphicon-chevron-right
 					else
-						h3.text-muted There are no posts yet.
-		
-		if data.categories.length
-			.col-sm-4.col-md-3
-				h2 Categories
-				.list-group(style='margin-top: 70px;')
-					a(href='/news', class=!data.category ? 'active' : false).list-group-item All Categories
-					each cat in data.categories
-						a(href='/news/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name
+						li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
+		else
+			if data.category
+				h3.text-muted There are no posts in the category #{data.category.name}.
+			else
+				h3.text-muted There are no posts yet.
+
+	if data.categories.length
+		.col-sm-4.col-md-3
+			h2 Categories
+			.list-group(style='margin-top: 70px;')
+				a(href='/news', class=!data.category ? 'active' : false).list-group-item All Categories
+				each cat in data.categories
+					a(href='/news/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name

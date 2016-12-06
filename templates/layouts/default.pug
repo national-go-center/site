@@ -91,14 +91,18 @@ html
 					//- Remember to include it in your templates when you override the intro and content blocks!
 
 					//- The Intro block appears above flash messages (used for temporary information display)
-					block intro
+					.row: .col-md-12.feature
+						.full-background(style='background-image: url(/images/jonathan-hop.jpg)')
+						.row: .col-md-10.col-md-offset-2
+							block intro
 
-					//- Flash messages allow you to display once-off status messages to users, e.g. form
-					//- validation errors, success messages, etc.
-					+flash-messages(messages)
+					.row: .col-md-10.col-md-offset-2
+						//- Flash messages allow you to display once-off status messages to users, e.g. form
+						//- validation errors, success messages, etc.
+						+flash-messages(messages)
 
-					//- The content block should contain the body of your template's content
-					block content
+						//- The content block should contain the body of your template's content
+						block content
 
 
 				//- FOOTER
