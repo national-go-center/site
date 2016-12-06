@@ -10,7 +10,7 @@ block intro
 
 block content
 	.row
-		.col-md-7.what-is-go
+		.col-md-8.what-is-go
 			h2 What is Go?
 			
 			p: b Go is the hardest, deepest, best game humans&nbsp;play.
@@ -21,24 +21,62 @@ block content
 					a(href='http://playgo.to/iwtg/en/') Learn to play
 				li
 					a(href='http://www.usgo.org/what-go') Read more about go at the American Go Association
-					
-		.col-md-5.recent-news
-			h2 Recent News
-			ul
-				each post in data.posts.results
-					li
-						a(href=`/news/post/${post.slug}`) #{post.title}
-					
-		.col-md-5.recent-news
-			h2 Announcements
-			ul
-				each item in data.announcements.items
-					li
-						a(href='#{item.link}') !{item.title}
-					
-			h2 Events
-			ul
-				each item in data.events.items
-					li
-						a(href='#{item.link}') !{item.title}
-					
+				
+			.row.row-grid
+				.col-sm-12
+					h2 Recent News
+					ul
+						each post in data.posts.results
+							li
+								a(href=`/news/post/${post.slug}`) #{post.title}
+
+				.col-sm-12
+					.forum.panel.panel-default
+						.panel-heading
+							| From the
+							= ' '
+							a(href='http://forum.nationalgocenter.org') Forum
+						.panel-body
+							.col-sm-6
+								h3 Announcements
+								ul
+									each item in data.announcements.items
+										li
+											a(href=item.link) !{item.title}
+
+							.col-sm-6
+								h3 Events
+								ul
+									each item in data.events.items
+										li
+											a(href=item.link) !{item.title}
+
+
+		.col-md-4
+			//- Facebook follow button, keep for future reference
+				iframe(
+					src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2Fnationalgocenter%2F&width=78&height=65&layout=button&size=large&show_faces=true&appId=62565366656" 
+					width="78"
+					height="65"
+					style="border:none;overflow:hidden"
+					scrolling="no"
+					frameborder="0"
+					allowTransparency="true"
+				)
+			//- Facebook page badge, keep for future reference
+				iframe(
+					src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnationalgocenter%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=248273971893081"
+					width="340"
+					height="500"
+					style="border:none;overflow:hidden"
+					scrolling="no"
+					frameborder="0"
+					allowTransparency="true"
+				)
+			
+			a.twitter-timeline(
+				href='https://twitter.com/natgocenter'
+				data-tweet-limit='5'
+				data-chrome='transparent'
+			)
+			script(async src='//platform.twitter.com/widgets.js' charset='utf-8')
