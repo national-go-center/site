@@ -15,7 +15,7 @@ mixin post(post)
 					else
 						|  
 			if post.author
-				| by #{post.author.name.first}
+				| by #{post.author.name.first} #{post.author.name.last}
 		if post.image.exists
 			img(src=post._.image.fit(160,160)).img.pull-right
 		p!= post.content.brief
@@ -30,16 +30,17 @@ block content
 		h3.text-muted Invalid Category.
 	else
 		if data.posts.results.length
-			if data.posts.totalPages > 1
-				h4.text-weight-normal Showing
-					strong #{data.posts.first}
-					|  to
-					strong #{data.posts.last}
-					|  of
-					strong #{data.posts.total}
-					|  posts.
-			else
-				h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
+			// 
+				if data.posts.totalPages > 1
+					h4.text-weight-normal Showing
+						strong #{data.posts.first}
+						|  to
+						strong #{data.posts.last}
+						|  of
+						strong #{data.posts.total}
+						|  posts.
+				else
+					h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
 			.news
 				each post in data.posts.results
 					+post(post)
