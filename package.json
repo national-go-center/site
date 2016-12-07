@@ -31,8 +31,9 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "node keystone.js",
     "js": "webpack --optimize-minimize -d",
-    "watch": "webpack --optimize-minimize -d --progress --colors --watch"
+    "watch": "webpack --optimize-minimize -d --progress --colors --watch",
+    "start": "NODE_ENV=production forever start --minUptime 1000 --spinSleepTime 1000 keystone.js",
+    "stop": "forever stop keystone.js"
   }
 }
