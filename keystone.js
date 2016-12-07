@@ -39,6 +39,20 @@ keystone.set('locals', {
 	env: keystone.get('env'),
 	utils: keystone.utils,
 	editable: keystone.content.editable,
+	
+	// Pug options
+	pretty: false,
+	/*
+	 * Keep around for reference
+	 * Filters might be useful, but they don't work on dynamic content
+	 * /
+	filters: {
+		'prevent-widows': function (text, options) {
+			// Prevent widows by replacing the final space with a non-breaking space
+			return text.replace(/ ([^ ]*)$/g, '&nbsp;$1');
+		}
+	}
+	*/
 });
 
 // Load your project's Routes

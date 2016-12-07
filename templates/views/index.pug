@@ -16,19 +16,19 @@ block content
 			p: b Go is the hardest, deepest, best game humans&nbsp;play.
 			p Its rules are incredibly simple, but the strategy and tactics that emerge from them are vast and profound. Many players around the world spend lifetimes trying to improve their play. There are highly competitive organizations of professional players in many countries in Asia, and emerging professional players in the United States and Europe.
 			
-			ul
+			ul.list-display
 				li
-					a(href='http://playgo.to/iwtg/en/') Learn to play
+					a(href='http://playgo.to/iwtg/en/') Learn to&nbsp;play
 				li
-					a(href='http://www.usgo.org/what-go') Read more about go at the American Go Association
+					a(href='http://www.usgo.org/what-go') Read more about go at the American Go&nbsp;Association
 				
 			.row.row-grid
 				.col-sm-12
 					h2 Recent News
-					ul
+					ul.list-display
 						each post in data.posts.results
 							li
-								a(href=`/news/post/${post.slug}`) #{post.title}
+								a(href=`/news/post/${post.slug}`) !{post.title.replace(/ ([^ ]*)$/g, '&nbsp;$1')}
 
 				.col-sm-12
 					.forum.panel.panel-default
@@ -39,17 +39,17 @@ block content
 						.panel-body
 							.col-sm-6
 								h3 Announcements
-								ul
+								ul.list-display
 									each item in data.announcements.items
 										li
-											a(href=item.link) !{item.title}
+											a(href=item.link) !{item.title.replace(/ ([^ ]*)$/g, '&nbsp;$1')}
 
 							.col-sm-6
 								h3 Events
-								ul
+								ul.list-display
 									each item in data.events.items
 										li
-											a(href=item.link) !{item.title}
+											a(href=item.link) !{item.title.replace(/ ([^ ]*)$/g, '&nbsp;$1')}
 
 
 		.col-md-4
