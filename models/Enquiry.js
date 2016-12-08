@@ -43,7 +43,6 @@ Enquiry.schema.methods.sendNotificationEmail = function (callback) {
 	if (typeof callback !== 'function') {
 		callback = function (err, response) {
 			/* Keep for debugging */
-			/*
 			console.log(util.inspect(err, {
 				showHidden: false,
 				depth: null,
@@ -53,7 +52,6 @@ Enquiry.schema.methods.sendNotificationEmail = function (callback) {
 				depth: null,
 				colors: true
 			}));
-			*/
 		};
 	}
 	var enquiry = this;
