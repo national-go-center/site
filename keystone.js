@@ -41,7 +41,7 @@ keystone.set('locals', {
 	editable: keystone.content.editable,
 	
 	// Pug options
-	pretty: false,
+	pretty: false
 	/*
 	 * Keep around for reference
 	 * Filters might be useful, but they don't work on dynamic content

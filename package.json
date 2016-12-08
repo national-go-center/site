@@ -8,10 +8,13 @@
     "dotenv": "^2.0.0",
     "fast-feed": "^1.5.5",
     "keystone": "^4.0.0-beta.4",
+    "keystone-email": "https://github.com/keystonejs/keystone-email.git",
     "lodash": "^4.13.1",
     "node-sass": "^3.8.0",
     "node-sass-middleware": "^0.9.7",
     "node-supervisor": "^1.0.2",
+    "nodemailer": "^2.7.0",
+    "nodemailer-sendgrid-transport": "https://github.com/starchup/nodemailer-sendgrid-transport",
     "pug": "^2.0.0-beta6",
     "restart": "0.0.4",
     "wgo": "^3.0.0-alpha.1"

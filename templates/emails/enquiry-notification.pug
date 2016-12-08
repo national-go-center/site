@@ -1,8 +1,7 @@
 extends /layouts/default
 
 block body-contents
-	h1 Hi *|first_name|*,
-	p.text-larger An enquiry was just submitted to #{brand}:
+	p.text-larger New enquiry from the National Go Center site:
 	if enquiry.name.full || enquiry.email
 		p.text-larger From 
 			if enquiry.name.full
@@ -21,4 +20,4 @@ block body-contents
 		.text-larger !{enquiry.message.html}
 	p.text-muted Sent #{enquiry._.createdAt.format()}
 	p &nbsp;
-	+button({ url: '/keystone/enquiries/' + enquiry.id, label: 'Open Keystone' })
+		a(href='http://nationalgocenter.org/keystone/enquiries/' + enquiry.id) Open Keystone
