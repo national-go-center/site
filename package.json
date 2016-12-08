@@ -8,7 +8,7 @@
     "dotenv": "^2.0.0",
     "fast-feed": "^1.5.5",
     "keystone": "^4.0.0-beta.4",
-    "keystone-email": "https://github.com/keystonejs/keystone-email.git",
+    "keystone-email": "https://github.com/neagle/keystone-email",
     "lodash": "^4.13.1",
     "node-sass": "^3.8.0",
     "node-sass-middleware": "^0.9.7",
