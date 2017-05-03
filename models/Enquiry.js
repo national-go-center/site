@@ -20,6 +20,8 @@ Enquiry.add({
 	email: { type: Types.Email, required: true },
 	phone: { type: String },
 	enquiryType: { type: Types.Select, options: [
+		{ value: 'membership', label: 'Requesting membership' },
+		{ value: 'rsvp', label: 'Sending an RSVP for an event' },
 		{ value: 'message', label: 'Just leaving a message' },
 		{ value: 'question', label: 'I\'ve got a question' },
 		{ value: 'other', label: 'Something else...' },
