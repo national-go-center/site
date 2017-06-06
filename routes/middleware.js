@@ -28,8 +28,9 @@ exports.initLocals = function (req, res, next) {
 	*/
 	res.locals.navLinks = [
 		{ label: 'Home', key: 'home', href: '/' },
+		{ label: 'About', key: 'about', href: '/about' },
 		{ label: 'Calendar', key: 'calendar', href: 'https://nationalgocenter.wildapricot.org/Upcoming-Events?EventViewMode=1&EventListViewMode=2' },
-		{ label: 'News', key: 'news', href: '/news' },
+		// { label: 'News', key: 'news', href: '/news' },
 		{ label: 'Resources', key: 'resources', href: '/resources' },
 		{ label: 'Forum', key: 'forum', href: 'http://forum.nationalgocenter.org' },
 		{ label: 'Contact', key: 'contact', href: '/contact' }

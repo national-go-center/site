@@ -15,75 +15,63 @@ block content
 
 			p: b Go is the hardest, deepest, best game humans&nbsp;play.
 			p Its rules are incredibly simple, but the strategy and tactics that emerge from them are vast and profound. Many players around the world spend lifetimes trying to improve their play. There are highly competitive organizations of professional players in many countries in Asia, and emerging professional players in the United States and Europe.
-
-			h2 The National Go Center
-
-			:markdown-it
-				The NGC is located at [4652 Wisconsin Ave NW](https://www.google.com/maps/place/4652+Wisconsin+Ave+NW,+Washington,+DC+20016/@38.9508549,-77.083192,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c9ea94b57705:0xfd0e06868908f407!8m2!3d38.9508549!4d-77.080998)  in Washington, DC.
-
-			h3 Open Hours
-
-			:markdown-it
-				The NGC is staffed by volunteers who open the center for
-				[events throughout the week](https://nationalgocenter.wildapricot.org/Upcoming-Events?EventViewMode=1&EventListViewMode=2). If you have any questions, [send us a note](/contact).
-
+			
 			ul.list-display
 				li
 					a(href='http://playgo.to/iwtg/en/') Learn to&nbsp;play
 				li
 					a(href='http://www.usgo.org/what-go') Read more about go at the American Go&nbsp;Association
 
-			.row.row-grid
-				.col-sm-12
-					h2 Recent News
-					ul.list-display
-						each post in data.posts.results
-							li
-								a(href=`/news/post/${post.slug}`) !{post.title.replace(/ ([^ ]*)$/g, '&nbsp;$1')}
+			h2 The National Go Center
 
-				.col-sm-12
-					.forum.panel.panel-default
-						.panel-heading
-							| From the
-							= ' '
-							a(href='http://forum.nationalgocenter.org') Forum
-						.panel-body
-							.col-sm-6
-								h3 Announcements
-								ul.list-display
-									each item in data.announcements.items
-										li
-											a(href=item.link) !{item.title.replace(/ ([^ ]*)$/g, '&nbsp;$1')}
-
-							.col-sm-6
-								h3 Events
-								ul.list-display
-									each item in data.events.items
-										li
-											a(href=item.link) !{item.title.replace(/ ([^ ]*)$/g, '&nbsp;$1')}
+			:markdown-it
+				The NGC is located at [4652 Wisconsin Ave NW](https://www.google.com/maps/place/4652+Wisconsin+Ave+NW,+Washington,+DC+20016/@38.9508549,-77.083192,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c9ea94b57705:0xfd0e06868908f407!8m2!3d38.9508549!4d-77.080998)  in Washington, DC.
+				
+				More information about [directions](/about#location), [parking](/about#parking), [costs &amp; fees](/about#cost), and [hours &amp; schedule](/about#schedule).
+				
+			//- .row.row-grid
+			//- 	.col-sm-12
+			//- 		h2 Recent News
+			//- 		ul.list-display
+			//- 			each post in data.posts.results
+			//- 				li
+			//- 					a(href=`/news/post/${post.slug}`) !{post.title.replace(/ ([^ ]*)$/g, '&nbsp;$1')}
+			//- 
+			//- 	.col-sm-12
+			//- 		.forum.panel.panel-default
+			//- 			.panel-heading
+			//- 				| From the
+			//- 				= ' '
+			//- 				a(href='http://forum.nationalgocenter.org') Forum
+			//- 			.panel-body
+			//- 				.col-sm-6
+			//- 					h3 Announcements
+			//- 					ul.list-display
+			//- 						each item in data.announcements.items
+			//- 							li
+			//- 								a(href=item.link) !{item.title.replace(/ ([^ ]*)$/g, '&nbsp;$1')}
+			//- 
+			//- 				.col-sm-6
+			//- 					h3 Events
+			//- 					ul.list-display
+			//- 						each item in data.events.items
+			//- 							li
+			//- 								a(href=item.link) !{item.title.replace(/ ([^ ]*)$/g, '&nbsp;$1')}
 
 
 		.col-md-4
-			//-Facebook like button -- just the button
-				iframe(
-					src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2Fnationalgocenter%2F&width=78&height=65&layout=button&size=large&show_faces=true&appId=62565366656"
-					width="78"
-					height="65"
-					style="border:none;overflow:hidden"
-					scrolling="no"
-					frameborder="0"
-					allowTransparency="true"
-				)
-			//-Facebook badge
-				iframe(
-					src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnationalgocenter%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=248273971893081"
-					width="340"
-					height="500"
-					style="border:none;overflow:hidden"
-					scrolling="no"
-					frameborder="0"
-					allowTransparency="true"
-				)
+			.fb-page(
+				data-href='https://www.facebook.com/nationalgocenter/'
+				data-width='500'
+				data-small-header='true'
+				data-adapt-container-width='true'
+				data-hide-cover='false'
+				data-show-facepile='true'
+			)
+			
+				blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/nationalgocenter/')
+					a(href='https://www.facebook.com/nationalgocenter/')
+						| National Go Center
 
 			a.twitter-timeline(
 				href='https://twitter.com/natgocenter'
@@ -91,3 +79,4 @@ block content
 				data-chrome='transparent'
 			)
 			script(async src='//platform.twitter.com/widgets.js' charset='utf-8')
+			
