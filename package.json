@@ -8,6 +8,7 @@
     "dotenv": "^2.0.0",
     "fast-feed": "^1.5.5",
     "jstransformer-markdown-it": "^2.0.0",
+    "forever": "^0.15.3",
     "keystone": "^4.0.0-beta.4",
     "keystone-email": "neagle/keystone-email#fix-nodemailer",
     "lodash": "^4.13.1",
