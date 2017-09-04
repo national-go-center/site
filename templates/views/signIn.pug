@@ -1,0 +1,25 @@
+extends ../layouts/default
+
+block intro
+	h1 Sign In
+
+block content
+	if enquirySubmitted
+		h3 Thanks!
+	else
+		.row: .col-sm-8.col-md-6
+			p Welcome to the National Go Center! If you are here for the first time, please sign in.
+
+			form(method='post')
+				input(type='hidden', name='action', value='signIn')
+				.form-group(class=validationErrors.name ? 'has-error' : null)
+					label Name
+					input(type='text', name='name.full', value=formData['name.full']).form-control
+				.form-group(class=validationErrors.email ? 'has-error' : null)
+					label Email
+					input(type='email', name='email', value=formData.email).form-control
+				.form-group
+					label Phone
+					input(type='tel', name='phone', value=formData.phone, placeholder='(optional)').form-control
+				.form-actions
+					button(type='submit').btn.btn-primary Send
