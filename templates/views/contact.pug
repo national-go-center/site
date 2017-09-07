@@ -2,12 +2,14 @@ extends ../layouts/default
 
 block intro
 	h1 Contact Us
-		
+
 block content
 	if enquirySubmitted
 		h3 Thanks for getting in touch!
 	else
 		.row: .col-sm-8.col-md-6
+			p To reach us during open hours, you can call us at #[a(href='tel:2022440208') (202) 244-0208]. Otherwise, please use the form below to send us a message.
+
 			form(method='post')
 				input(type='hidden', name='action', value='contact')
 				.form-group(class=validationErrors.name ? 'has-error' : null)
