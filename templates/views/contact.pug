@@ -1,14 +1,24 @@
 extends ../layouts/default
 
+block head
+	script(src='https://www.google.com/recaptcha/api.js')
+
 block intro
 	h1 Contact Us
 
 block content
 	if enquirySubmitted
 		h3 Thanks for getting in touch!
+	else if notARobot === false
+		h3 Do you dream of electric sheep?
+		p It looks like you might be a bot. If red blood does indeed flow through your veins, please go back, make sure to click on the &ldquo;I&rsquo;m not a robot&rdquo; button, and try again.
 	else
 		.row: .col-sm-8.col-md-6
 			p To reach us during open hours, you can call us at #[a(href='tel:2022440208') (202) 244-0208]. Otherwise, please use the form below to send us a message.
+
+			if noHumanProof === true
+				h3.error Please prove you are a human!
+				p Click on the &ldquo;I&rsquo;m not a robot&rdquo; button before sending.
 
 			form(method='post')
 				input(type='hidden', name='action', value='contact')
@@ -30,5 +40,7 @@ block content
 				.form-group(class=validationErrors.message ? 'has-error' : null)
 					label Message
 					textarea(name='message', placeholder='Leave us a message...' rows=4).form-control= formData.message
+				.form-group
+					div.g-recaptcha(data-sitekey="6LdgWVMUAAAAAC2ZxfhAp1W5ene_9s8RbI-vqtOa")
 				.form-actions
 					button(type='submit').btn.btn-primary Send

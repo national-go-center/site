@@ -18,6 +18,7 @@
     "nodemailer": "^2.7.0",
     "nodemailer-sendgrid-transport": "https://github.com/starchup/nodemailer-sendgrid-transport",
     "pug": "^2.0.0-beta6",
+    "request": "^2.85.0",
     "restart": "0.0.4",
     "wgo": "^3.0.0-alpha.1"
   },
